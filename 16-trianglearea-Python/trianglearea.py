@@ -4,6 +4,9 @@
 # will probably wish to use Heron's Formula.
 
 
+from math import sqrt
+
 def trianglearea(s1, s2, s3):
-	# your code goes here
-	pass
+	perimeter = (s1+s2+s3)/2
+	area = sqrt(perimeter*(perimeter-s1)*(perimeter-s2)*(perimeter-s3))
+	return area
