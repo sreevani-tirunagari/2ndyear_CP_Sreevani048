@@ -4,5 +4,11 @@
 # The second or further occurrence of duplicate should be removed.
 
 def removeduplicate(text):
-	# Your code goes here
-	pass
+	a = []
+
+	for i in text:
+		if(i not in a):
+			a.append(i)
+
+	return ''.join(a)	
+	
