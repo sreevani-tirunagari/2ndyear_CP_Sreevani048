@@ -4,14 +4,6 @@
 #       assert(smallestDifference([19,2,83,6,27]) == 4)
 # The two closest numbers in that list are 2 and 6, and their difference is 4.
 
-def readArray():
-    s = input().split(" ")
-    l = []
-    for i in s:
-        if len(i) != 0:
-            l.append(int(i))
-    return l
-
 def smallestdifference(a):
     if(a==[]):
         return(-1)
