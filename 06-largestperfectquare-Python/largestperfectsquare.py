@@ -8,7 +8,8 @@
 # Another hint: This can be written using just one or two lines of Python.
 import math
 def largestperfectsquare(n):
-	if n == (math.sqrt(n)**2):
+	x=int(math.sqrt(n))
+	if n == (x**2):
 		return n
 	else:
 		return (math.ceil(math.sqrt(n)) - 1)**2
