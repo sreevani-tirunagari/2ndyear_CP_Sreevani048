@@ -2,19 +2,16 @@
 # Write the function nthHappyPrime(n) which takes a non-negative integer 
 # and returns the nth happy prime number (where the 0th happy prime number is 7).
 
-def isPrime(n):
+def isprime(n):
     if (n < 2):
         return False
-    if (n == 2):
+    if (n==2):
         return True
-    if (n % 2 == 0):
-        return False
-    maxFactor = round(n**0.5)
-    for factor in range(3,maxFactor+1,2):
-        if (n % factor == 0):
-            return False
+    else:
+        for i in range(2,int(n)):
+            if(n%i==0):
+                return False
     return True
-
 
 def ishappynumber(n):
     
@@ -37,7 +34,7 @@ def fun_nth_happy_prime(n):
     while (found <= n):
         guess += 1
         
-        if ((ishappynumber(guess)) and (isPrime(guess))):
+        if ((ishappynumber(guess)) and (isprime(guess))):
             found += 1
             
     return guess
