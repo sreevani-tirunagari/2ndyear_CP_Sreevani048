@@ -13,20 +13,19 @@ def isprime(x):
 			if(x%i==0):
 				return False
 	return True
+
 def powerfulnumber(x):
 	if(x==1):
-		return True
-	
-	else:
-		
+		return True	
+	else:		
 		count=0
 		count2=0
-		for i in range(2,int(x/2)+1):
+		for i in range(2,x):
 			if(x%i==0 and isprime(i)):
 				count+=1
 				if(x%(i*i)==0):
 					count2+=1
-		print(count,count2)
+
 		if(count==0 or count2==0):
 			return False
 		elif(count==count2):
@@ -34,11 +33,7 @@ def powerfulnumber(x):
 
 	return False
 
-
-
-
 def nthpowerfulnumber(n):
-	# Your code goes here
 	found=1
 	guess=1
 	count=0
